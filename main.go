@@ -9,7 +9,7 @@ import (
 	"crypto/rand"
 	"encoding/base64"
 	"fmt"
-	"github.com/vsergeev/btckeygenie/btckey"
+	"./btckey"
 	"log"
 	"os"
 )
@@ -72,11 +72,11 @@ func main() {
 	pri_bytes_str := byteString(pri_bytes)
 	pri_bytes_b64 := base64.StdEncoding.EncodeToString(pri_bytes)
 
-	fmt.Printf("Bitcoin Address (Compressed)        %s\n", address_compressed)
+	fmt.Printf("Sugarchain Address (Compressed)        %s\n", address_compressed)
 	fmt.Printf("Public Key Bytes (Compressed)       %s\n", pub_bytes_compressed_str)
 	fmt.Printf("Public Key Base64 (Compressed)      %s\n", pub_bytes_compressed_b64)
 	fmt.Println()
-	fmt.Printf("Bitcoin Address (Uncompressed)      %s\n", address_uncompressed)
+	fmt.Printf("Sugarchain Address (Uncompressed)      %s\n", address_uncompressed)
 	fmt.Printf("Public Key Bytes (Uncompressed)     %s\n", pub_bytes_uncompressed_str[0:65])
 	fmt.Printf("                                    %s\n", pub_bytes_uncompressed_str[65:])
 	fmt.Printf("Public Key Base64 (Uncompressed)    %s\n", pub_bytes_uncompressed_b64)
