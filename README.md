@@ -10,13 +10,13 @@
 
 sugarkeygenie is a standalone Sugarchain keypair/address generator written in Go.
 sugarkeygenie generates an ECDSA secp256k1 keypair, dumps the public key in
-compressed and uncompressed Sugarchain address, hexadecimal, and base64 formats,
+compressed and uncompressed Sugarchain address, hexadecimal and base64 formats,
 and dumps the private key in Wallet Import Format (WIF), Wallet Import Format
-Compressed (WIFC), hexadecimal, and base64 formats.
+Compressed (WIFC), hexadecimal and base64 formats.
 
 sugarkeygenie includes a lightweight Go package called btckey to easily generate
 keypairs, and convert them between compressed and uncompressed varieties of
-Sugarchain Address, Wallet Import Format, and raw bytes.
+Sugarchain Address, Wallet Import Format and raw bytes.
 
 See documentation on btckey here: https://godoc.org/github.com/vsergeev/btckeygenie/btckey
 
@@ -74,7 +74,7 @@ https://github.com/cryptozeny/bitzeny-vanitygen/tree/da485eb438d1579935856bf262a
 
 ## Installation
 
-To fetch, build, and install sugarkeygenie to `$GOPATH/bin`:
+To fetch, build and install sugarkeygenie to `$GOPATH/bin`:
 
     $ go get github.com/cryptozeny/sugarkeygenie
 
