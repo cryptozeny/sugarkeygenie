@@ -22,7 +22,7 @@ See documentation on btckey here: https://godoc.org/github.com/vsergeev/btckeyge
 
 Donations are welcome at :  
 `15PKyTs3jJ3Nyf3i6R7D9tfGCY1ZbtqWdv` vsergeev  
-`31hMrody48EpQF4ZH3eFEd7CMJLPPCBHSe` cryptozeny  
+`3Gcbpn4QU4iGibZox378VdEJvjx7Z7J7Tr` cryptozeny  
 :-)
 
 ## Usage
