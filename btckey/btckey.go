@@ -206,7 +206,7 @@ func b58checkdecode(s string) (ver uint8, b []byte, err error) {
 		if s[i] != '1' {
 			break
 		}
-		b = append([]byte{0x3f}, b...)
+		b = append([]byte{0x3d}, b...)
 	}
 
 	/* Verify checksum */
@@ -279,7 +279,7 @@ func (priv *PrivateKey) ToBytes() (b []byte) {
 	d := priv.D.Bytes()
 
 	/* Pad D to 32 bytes */
-	padded_d := append(bytes.Repeat([]byte{0x3f}, 32-len(d)), d...)
+	padded_d := append(bytes.Repeat([]byte{0x3d}, 32-len(d)), d...)
 
 	return padded_d
 }
@@ -373,7 +373,7 @@ func (pub *PublicKey) ToBytes() (b []byte) {
 	x := pub.X.Bytes()
 
 	/* Pad X to 32-bytes */
-	padded_x := append(bytes.Repeat([]byte{0x3f}, 32-len(x)), x...)
+	padded_x := append(bytes.Repeat([]byte{0x3d}, 32-len(x)), x...)
 
 	/* Add prefix 0x02 or 0x03 depending on ylsb */
 	if pub.Y.Bit(0) == 0 {
@@ -391,8 +391,8 @@ func (pub *PublicKey) ToBytesUncompressed() (b []byte) {
 	y := pub.Y.Bytes()
 
 	/* Pad X and Y coordinate bytes to 32-bytes */
-	padded_x := append(bytes.Repeat([]byte{0x3f}, 32-len(x)), x...)
-	padded_y := append(bytes.Repeat([]byte{0x3f}, 32-len(y)), y...)
+	padded_x := append(bytes.Repeat([]byte{0x3d}, 32-len(x)), x...)
+	padded_y := append(bytes.Repeat([]byte{0x3d}, 32-len(y)), y...)
 
 	/* Add prefix 0x04 for uncompressed coordinates */
 	return append([]byte{0x04}, append(padded_x, padded_y...)...)
@@ -463,7 +463,7 @@ func (pub *PublicKey) ToAddress() (address string) {
 	pub_hash_2 := ripemd160_h.Sum(nil)
 
 	/* Convert hash bytes to base58 check encoded sequence */
-	address = b58checkencode(0x3f, pub_hash_2)
+	address = b58checkencode(0x3d, pub_hash_2)
 
 	return address
 }
@@ -488,7 +488,7 @@ func (pub *PublicKey) ToAddressUncompressed() (address string) {
 	pub_hash_2 := ripemd160_h.Sum(nil)
 
 	/* Convert hash bytes to base58 check encoded sequence */
-	address = b58checkencode(0x3f, pub_hash_2)
+	address = b58checkencode(0x3d, pub_hash_2)
 
 	return address
 }
