@@ -68,7 +68,7 @@ https://github.com/cryptozeny/bitzeny-vanitygen/tree/da485eb438d1579935856bf262a
 
     $ sugarkeygenie -h
     Usage: sugarkeygenie [WIF/WIFC]
-    
+
     sugarkeygenie v1.0.0 - https://github.com/cryptozeny/sugarkeygenie
     $
 
@@ -77,6 +77,12 @@ https://github.com/cryptozeny/bitzeny-vanitygen/tree/da485eb438d1579935856bf262a
 To fetch, build and install sugarkeygenie to `$GOPATH/bin`:
 
     $ go get github.com/cryptozeny/sugarkeygenie
+
+Manually on Debian 10
+
+    $ sudo apt-get install golang-go
+    $ go get -u golang.org/x/crypto/...
+    $ go build main.go
 
 ## License
 
